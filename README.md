@@ -90,10 +90,9 @@ PWM_SetDutyCycle(PWM_3,dutyCycle); //P2_2 DELAY_ms(10);
 }
 }
 }
+
 ```
 
-
- 
 # Output:
 
 <img width="505" height="386" alt="image" src="https://github.com/user-attachments/assets/6874fa9f-d3c9-4656-9866-531e66e69ce7" />
