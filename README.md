@@ -14,9 +14,11 @@ KEIL MICRO VISION 4.0 IDE
 
 
 ⮚	Open the Keil software and select the New uvision project from Project Menu as shown below.
+
 ⮚	Browse to your project folder and provide the project name and click on save.
 
 ⮚	Once the project is saved a new pop up “Select Device for Target” opens, Select the controller (NXP: LPC1768) from NXP (founded by philips) and click on OK.
+
 ⮚	Select the controller (NXP: LPC1768) and click on OK.
 
 ⮚	As LPC1768 needs the startup code, click on Yes option to include the LPC17xx Startup file.
@@ -76,8 +78,11 @@ Header:
 /* start the main program */ int main()
 {
 int dutyCycle;
+
 SystemInit();	/* Clock and PLL configuration */
+
 PWM_Init(CYCLE_TIME);	/* Initialize the PWM module and the Cycle time(Ton+Toff) is set to 255(similar to arduino)*/
+
 PWM_Start(PWM_3); /* Enable PWM output on PWM_1-PWM_4 (P2_0 - P2_3) */ while(1)
 {
 for(dutyCycle=0;dutyCycle<CYCLE_TIME;dutyCycle++) /* Increase the Brightness of the Leds */
@@ -90,6 +95,7 @@ PWM_SetDutyCycle(PWM_3,dutyCycle); //P2_2 DELAY_ms(10);
 }
 }
 }
+
 
 ```
 
